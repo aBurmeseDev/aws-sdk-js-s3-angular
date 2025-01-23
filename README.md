@@ -9,7 +9,7 @@ This project was generated using [Angular CLI](https://github.com/angular/angula
 
 ## Setup
 - Clone this repo
-- Add `accessKeyId` `secretAccessKey` in src/app/services/s3.ts for temporary testing or Create a Amazon Cognito Identity pool and ensure the role have write access to S3 bucket.
+- Add `accessKeyId` `secretAccessKey` in `src/app/services/s3.ts` for temporary testing or Create a Amazon Cognito Identity pool and ensure the role have write access to S3 bucket.
 - Ensure your S3 Bucket have CORS enabled.
   - CORS config for S3 bucket:
     ```json
@@ -28,6 +28,19 @@ This project was generated using [Angular CLI](https://github.com/angular/angula
     ]
     }    
     ```
+    ```json
+    {
+    "CORSRules": [
+        {
+            "AllowedHeaders": ["*"],
+            "AllowedMethods": ["PUT", "POST"],
+            "AllowedOrigins": ["http://localhost:4200"],
+            "ExposeHeaders": []
+        }
+    ]
+    }
+    ```
+
 
 ## Development server
 
